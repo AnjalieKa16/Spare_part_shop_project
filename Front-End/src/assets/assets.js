@@ -3,7 +3,8 @@ import backgroundImage1 from './backgroundImage1.jpg'
 import searchIcon from './search_Image.jpg'
 import basket from './basket.jpg'
 import brake from './brake_set.jpg'
-import filters from './filter.png'
+import filter from './filter.png'
+import Electrical_Electronics from './Electrical&Electronics.jpg'
 
 
 /*import basket from './basket.jpg'
@@ -31,6 +32,11 @@ export const category_list=[
     
     {
         name: 'Filters',
-        image: filters
+        image: filter
+    },
+
+    {
+        name: 'Electrical & Electronics',
+        image: Electrical_Electronics
     }
 ]
