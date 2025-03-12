@@ -1,0 +1,129 @@
+
+/* Set the background for the entire page */
+body {
+  background-color: #322f2f; /* Light grey background */
+  background-image: url('path-to-your-background-image.jpg'); /* Optional background image */
+  background-size: cover; /* Ensures the background image covers the entire page */
+  background-position: center; /* Centers the background image */
+  height: 100vh; /* Full height for the page */
+  margin: 0;
+}
+/* General container styling */
+.register-container {
+  width: 800px;
+  background: linear-gradient(to bottom, #111, #222);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* Title */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group (Label + Input) ,.form-group label and an input field together*/
+.form-group {
+  display: flex;
+  justify-content: space-between;/* Space between label & input */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  flex: 1;
+  font-size: 14px;
+  text-align: left;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 2.5;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 60px;
+}
+
+/* Checkbox styling */
+.checkbox {
+  display: flex;
+  align-items:center;
+  margin-bottom: 30px;
+  justify-content: flex-start; /* Aligns the content to the left */
+  padding-right: 150px; /* Adds slight padding for better spacing */
+}
+
+/* Align checkbox and terms/privacy statement */
+.form-group.checkbox {
+  display: flex;
+  align-items:center; /* Ensures checkbox and text align */
+  margin-top: 15px;
+}
+
+.checkbox input {
+  width: 14px;
+  height: 14px;
+  margin-right:10px;/* Adds space between checkbox and the text */
+}
+
+.terms, .privacy {
+  color: rgb(153, 140, 140);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Register Button */
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background: darkred;
+}
+
+/* Disabled Button */
+.register-button.disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Login Text */
+.login-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
