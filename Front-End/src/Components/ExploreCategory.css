@@ -1,0 +1,15 @@
+.exploreCategory{
+    display:flex ;
+    flex-direction: column;
+    gap: 20px ;
+}
+
+.exploreCategory h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b19999;
+}
+
+.explore_categoryList{
+    
+}

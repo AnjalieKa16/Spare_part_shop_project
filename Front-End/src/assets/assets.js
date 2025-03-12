@@ -2,6 +2,8 @@ import logosparep from './logo1.jpg'
 import backgroundImage1 from './backgroundImage1.jpg'
 import searchIcon from './search_Image.jpg'
 import basket from './basket.jpg'
+import brake from './brake_set.jpg'
+import filters from './filter.png'
 
 
 /*import basket from './basket.jpg'
@@ -18,3 +20,17 @@ export const assets = {
     searchIcon,
     basket
 }
+
+
+export const category_list=[
+    
+    {
+        name: 'Brakes',
+        image: brake
+    },
+    
+    {
+        name: 'Filters',
+        image: filters
+    }
+]
