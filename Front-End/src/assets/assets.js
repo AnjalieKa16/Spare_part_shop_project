@@ -5,6 +5,8 @@ import basket from './basket.jpg'
 import brake from './brake_set.jpg'
 import filter from './filter.png'
 import Electrical_Electronics from './Electrical&Electronics.jpg'
+import LubricantsFluids from './EngineOil.jpg'
+import Lightnings from './Lightnings.jpg'
 
 
 /*import basket from './basket.jpg'
@@ -26,17 +28,27 @@ export const assets = {
 export const category_list=[
     
     {
-        name: 'Brakes',
-        image: brake
+        category_name: 'Brakes',
+        category_image: brake
     },
     
     {
-        name: 'Filters',
-        image: filter
+        category_name: 'Filters',
+        category_image: filter
     },
 
     {
-        name: 'Electrical & Electronics',
-        image: Electrical_Electronics
+        category_name: 'Electrical & Electronics',
+        category_image: Electrical_Electronics
+    },
+    
+    {
+        category_name: 'Lubricants & Fluids',
+        category_image: LubricantsFluids
+    },
+    
+    {
+        category_name: 'Lightnings',
+        category_image: Lightnings   
     }
 ]
