@@ -149,7 +149,7 @@ const AdminDashboard = () => {
             </Link>
           </li>
           <li className="w-100">
-            <Link to="/AdminDashboard/Suppliers" className="nav-link text-white align-middle px-0">
+            <Link to="/AdminDashboard/Supplier" className="nav-link text-white align-middle px-0">
               <FaUserTie className="ms-2" /> <span className="ms-2 d-none d-sm-inline">Suppliers</span>
             </Link>
           </li>

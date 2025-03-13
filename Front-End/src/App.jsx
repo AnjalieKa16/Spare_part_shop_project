@@ -14,7 +14,8 @@ import Home from './Components/Home';
 import Employee from './Components/Employee';
 import Products from './Components/Products';
 import Orders from './Components/Orders';
-import Suppliers from './Components/Suppliers';
+import Supplier from './Components/Supplier/Supplier';
+import AddSuppliers from './Components/Supplier/AddSuppliers';
 import DeliveryServices from './Components/DeliveryServices';
 import AddEmployee from './Components/AddEmployee';
 import EditEmployee from './Components/EditEmployee';
@@ -79,7 +80,8 @@ function App() {
           <Route path='/AdminDashboard/employee' element={<Employee/>}></Route>
           <Route path='/AdminDashboard/products' element={<Products/>}></Route>
           <Route path='/AdminDashboard/orders' element={<Orders/>}></Route>
-          <Route path='/AdminDashboard/suppliers' element={<Suppliers/>}></Route>
+          <Route path='/AdminDashboard/supplier' element={<Supplier/>}></Route>
+          <Route path='/AdminDashboard/AddSuppliers' element={<AddSuppliers/>}></Route>
           <Route path='/AdminDashboard/deliveryServices' element={<DeliveryServices/>}></Route>
           <Route path='/AdminDashboard/AddEmployee' element={<AddEmployee/>}></Route>
           <Route path='/AdminDashboard/EditEmployee/:id' element={<EditEmployee/>}></Route>
