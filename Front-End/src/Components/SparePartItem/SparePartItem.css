@@ -1,0 +1,104 @@
+.Spare-part-item{
+    flex: 0 0 auto; /* Prevents shrinking, maintains size */
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+  }
+
+.Spare-part-image-container {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.Spare-part-image{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px 15px 0px 0px ;
+    height: 150px;
+    object-fit: contain; /* Ensures a consistent image size */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.Spare-part-image-container:hover .Spare-part-image {
+    transform: scale(1.5); /* Adjust zoom level */
+}
+
+.item-information{
+    padding: 20px;
+}
+
+.spare-part-desc{
+    color: rgb(5, 5, 5);
+    font-size: 12px;
+    text-align: center;  /* Makes text more readable */
+    line-height: 1.4;  /* Improves spacing between lines */
+    word-wrap: break-word;  /* Ensures long words break properly */
+    overflow: hidden;  /* Prevents text overflow */
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  /* Limits description to 3 lines */
+    -webkit-box-orient: vertical;
+
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 4.2em; 
+}
+
+.spare-part-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px; 
+}
+
+.Spare-part-image-container .add {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.Spare-part-item-counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    gap: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    min-width: 80px;
+
+  
+}
+
+.Spare-part-item-counter img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+  
