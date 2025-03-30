@@ -46,3 +46,70 @@
   background-color: #fff;
   color: #000;
 }
+
+.navbar-search-icon .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+
+@media(max-width:1050px){
+.navbar .navbar-logo{
+  width:140px;
+}
+
+.navbar-menu{
+  gap: 20px;
+  font-size: 17px;
+}
+
+.nav-right{
+  gap: 30px;
+}
+
+.navbar-right img{
+  gap: 30px;
+}
+
+.navbar-right button{
+  padding:8px 25px;
+}
+
+}
+
+
+@media(max-width:900px){
+  .navbar .navbar-logo{
+    width:140px;
+  }
+  
+  .navbar-menu{
+    gap: 15px;
+    font-size: 16px;
+  }
+  
+  .nav-right{
+    gap: 20px;
+  }
+  
+  .navbar-right img{
+    gap: 20px;
+  }
+  
+  .navbar-right button{
+    padding:7px 20px;
+    font-size: 15px;
+  }
+  
+  }
+
+  @media(max-width:750px){
+    .navbar-menu{
+      display: none;
+    }
+  }

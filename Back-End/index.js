@@ -15,6 +15,10 @@ app.use(express.json())
 app.use('/auth',adminRouter)
 app.use(express.static('public'))
 
+app.get('/api/dashboard', (req, res) => {
+    res.json({ message: "Dashboard data loaded successfully!" });
+});
+
 app.listen(3000,() => {   // port no=3000
-    console.log("Server is running")
+    console.log("Server is running on port 3000")
 })

@@ -22,6 +22,10 @@ import EditEmployee from './Components/EditEmployee';
 import { Outlet } from 'react-router-dom'; // Import Outlet
 import Header from './Components/Header'; // Import the Header component
 import HomePage from './Pages/HomePage';
+import Category from './Components/Category';
+import AddCategory from './Components/AddCategory';
+import EditCategory from './Components/EditCategory';
+
 
 
 
@@ -79,12 +83,16 @@ function App() {
           <Route path='' element={<Home/>}></Route>
           <Route path='/AdminDashboard/employee' element={<Employee/>}></Route>
           <Route path='/AdminDashboard/products' element={<Products/>}></Route>
+          <Route path='/AdminDashboard/category' element={<Category/>}></Route>
           <Route path='/AdminDashboard/orders' element={<Orders/>}></Route>
           <Route path='/AdminDashboard/supplier' element={<Supplier/>}></Route>
           <Route path='/AdminDashboard/AddSuppliers' element={<AddSuppliers/>}></Route>
           <Route path='/AdminDashboard/deliveryServices' element={<DeliveryServices/>}></Route>
           <Route path='/AdminDashboard/AddEmployee' element={<AddEmployee/>}></Route>
           <Route path='/AdminDashboard/EditEmployee/:id' element={<EditEmployee/>}></Route>
+          <Route path='/AdminDashboard/AddCategory' element={<AddCategory/>}></Route>
+          <Route path='/AdminDashboard/EditCategory/:category_id' element={<AddCategory/>}></Route>
+          
 
         </Route>
           

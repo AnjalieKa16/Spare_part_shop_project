@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
+import Footer from '../Footer/Footer';
 
 const Navbar = () => {
   return (
@@ -23,7 +24,7 @@ const Navbar = () => {
               <Link className="nav-link" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact Us</Link>
+              <a className="nav-link" href='#footer'>Contact Us</a>
             </li>
           </ul>
           <div className="navbar-right d-flex align-items-center">

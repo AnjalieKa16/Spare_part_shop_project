@@ -144,6 +144,11 @@ const AdminDashboard = () => {
             </Link>
           </li>
           <li className="w-100">
+            <Link to="/AdminDashboard/category" className="nav-link text-white align-middle px-0">
+              <FaClipboardList className="ms-2" /> <span className="ms-2 d-none d-sm-inline">Category</span>
+            </Link>
+          </li>
+          <li className="w-100">
             <Link to="/AdminDashboard/Orders" className="nav-link text-white align-middle px-0">
               <FaClipboardList className="ms-2" /> <span className="ms-2 d-none d-sm-inline">Orders</span>
             </Link>

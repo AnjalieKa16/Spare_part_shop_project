@@ -7,6 +7,10 @@ import path from 'path'
 
 const router = express.Router()
 
+router.get('/', (req, res) => {
+    res.json({ message: "Auth route is working!" });
+});
+
 router.post('/adminlogin',(req,res) => {
     const sql = "SELECT * FROM admin WHERE username = ? AND password = ?"
     con.query(sql,[req.body.username,req.body.password],(err,result) => {
@@ -139,6 +143,81 @@ router.get('/employee_count',(req,res ) => {
     })
 
 })
+
+//avoid duplicate employee id
+/*
+const checkSql = "SELECT * FROM employee WHERE id = ?";
+con.query(checkSql, [id], (err, result) => {
+    if (err) return res.json({ status: false, error: "Query Error" });
+    if (result.length > 0) {
+        return res.json({ status: false, error: "Employee with this ID already exists." });
+    }
+
+    // Proceed with insertion
+});*/
+
+// Add Category Route
+router.get('/category', (req, res) => {
+    const sql = "SELECT * FROM product_category";
+    con.query(sql, (err, result) => {
+      if (err) return res.json({ status: false, error: err.message });
+      return res.json({ status: true, Result: result });
+    });
+    });
+    
+// Get category by ID
+router.get('/category/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "SELECT * FROM product_category WHERE category_id = ?";
+    con.query(sql, [id], (err, result) => {
+      if (err) return res.json({ status: false, error: err.message });
+      return res.json({ status: true, Result: result[0]}); // Return the first result
+    });
+  });
+
+  router.post('/AddCategory', (req, res) => {
+    const { category_id, category_name } = req.body;
   
+    // Validate input
+    if (!category_id || !category_name) {
+      return res.json({ status: false, error: "Both category_id and category_name are required." });
+    }
+  
+    const sql = "INSERT INTO product_category (category_id, category_name) VALUES (?, ?)";
+    con.query(sql, [category_id, category_name], (err, result) => {
+      if (err) {
+        if (err.code === 'ER_DUP_ENTRY') {
+          return res.json({ status: false, error: "Category ID already exists." });
+        }
+        return res.json({ status: false, error: err.message });
+      }
+      return res.json({ status: true, message: "Category added successfully." });
+    });
+  });
+
+// Edit Category Route  
+router.put('/EditCategory/:id', (req,res) => {
+    const id = req.params.id;
+    const { category_id, category_name } = req.body;
+
+    const sql = "UPDATE product_category SET category_id = ?, category_name = ? WHERE category_id = ?";
+    const values = [category_id, category_name, id];
+
+    con.query(sql, values, (err,result) => {
+        if(err)return res.json({status:false,error:"Query Error"})
+        return res.json({status:true,message:"Category Updated Successfully"})
+    })
+        
+})
+
+// DELETE Category Route
+router.delete('/delete_category/:id',(req,res)=>{
+    const id = req.params.id;
+    const sql = "delete from product_category where category_id = ?"
+    con.query(sql,[id],(err,result)=>{
+        if(err)return res.json({status:false,Error:"Query Error"+err})
+            return res.json({status:true,Result:result})
+    })
+})
 
 export {router as adminRouter}
