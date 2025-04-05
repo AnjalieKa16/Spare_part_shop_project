@@ -61,6 +61,7 @@ const AddCategory = () => {
         <h2 className='text-center'>Add Category</h2>
 
         <form className='row g-3' onSubmit={handleSubmit}>
+        
           <div className='col-12'>
             <label htmlFor="categoryID" className="form-label">Category</label>
             <input
@@ -68,6 +69,7 @@ const AddCategory = () => {
               className="form-control rounded-0"
               id="categoryID"
               placeholder='Enter Category ID'
+              value={category.category_id}
               onChange={(e) => setCategory({ ...category, category_id: e.target.value })}
             />
           </div>
@@ -79,6 +81,7 @@ const AddCategory = () => {
               className="form-control rounded-0"
               id="category_name"
               placeholder='Enter Category Name'
+              value={category.category_name}
               onChange={(e) => setCategory({ ...category, category_name: e.target.value })}
             />
           </div>

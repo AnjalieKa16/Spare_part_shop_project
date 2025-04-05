@@ -14,6 +14,7 @@ const SparePartItem = ({id,name,price,description,image}) => {
 
             <img className='Spare-part-image' src={image} alt='' />    
 
+    {/*
             {!cartItems[id]
                 ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt=''/>
                 : <div className='Spare-part-item-counter'>
@@ -25,7 +26,7 @@ const SparePartItem = ({id,name,price,description,image}) => {
                 </div>
 
             }
-            
+            */}
         </div>
 
         <div className='item-information'>
@@ -33,9 +34,23 @@ const SparePartItem = ({id,name,price,description,image}) => {
             <img src={assets.rating_starts}/>
         </div>
 
-        <p className='spare-part-desc'>{description}</p>
-        <p className='spare-part-price'>{price}</p>
+        <div className='item-information2'>
+        {/*<p className='spare-part-desc'>{description}</p>*/}
+        <p className='spare-part-price'>Rs. {price}</p>
+        <a href="#">More</a>
+        </div>
 
+        <div className="add-to-cart-btn">
+                <button className="btn" >
+                    <img
+                        src={assets.shopping_cart}
+                        alt="Shopping Cart"
+                        width="20"
+                        height="20"
+                    />
+                </button>
+        </div>
+            
     </div>
   )
 }

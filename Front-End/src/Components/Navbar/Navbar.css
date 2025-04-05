@@ -26,6 +26,8 @@
 .navbar-icon {
   height: 24px; /* Adjust the height as needed */
   width: auto; /* Maintain aspect ratio */
+  filter: brightness(0) invert(1);
+
 }
 
 .navbar-right .btn {

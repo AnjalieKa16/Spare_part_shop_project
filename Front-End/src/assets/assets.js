@@ -1,6 +1,8 @@
 import logosparep from './logo1.jpg'
 import backgroundImage1 from './backgroundImage1.jpg'
-import searchIcon from './search_Image.jpg'
+import search_line from './search-line.svg'
+import shopping_cart from './shopping-cart-2.svg'
+import user from './user-line.svg'
 import basket from './basket.jpg'
 import brake from './brake_set.jpg'
 import filter from './filter.png'
@@ -30,12 +32,14 @@ import Toyota_Genuine_Motor_Oil_10W_30 from 'Toyota_Genuine_Motor_Oil_10W_30'
 export const assets = {
     logosparep,
     backgroundImage1,
-    searchIcon,
+    search_line,
+    shopping_cart,
     basket,
     add_icon_white,
     add_icon_green,
     remove_icon_red,
-    facebookIcon2
+    facebookIcon2,
+    user
 
 }
 

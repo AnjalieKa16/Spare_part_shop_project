@@ -14,6 +14,7 @@ app.use(cors(
 app.use(express.json())
 app.use('/auth',adminRouter)
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true })); // To parse URL-encoded request bodies
 
 app.get('/api/dashboard', (req, res) => {
     res.json({ message: "Dashboard data loaded successfully!" });

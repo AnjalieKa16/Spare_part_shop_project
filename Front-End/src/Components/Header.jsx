@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
@@ -20,10 +22,12 @@ const Header = () => {
     <header className="header" id="Header">
       <div className="header-contents">
         <h2>Find the Right Part for Every Make and Model</h2>
+
         <div className="button-group">
-          <button className="btn btn-primary mx-2">Login</button>
-          <button className="btn btn-outline-light mx-2">Register</button>
+          <Link to="/login" className="btn btn-primary mx-2">Login</Link>
+          <Link to="/register" className="btn btn-outline-light mx-2">Register</Link>
         </div>
+
       </div>
     </header>
   );

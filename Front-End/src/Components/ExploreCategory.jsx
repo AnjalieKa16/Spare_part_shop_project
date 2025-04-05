@@ -17,7 +17,8 @@ const ExploreCategory = ({ category, setCategory }) => {
             <div 
               key={index}
               className={`category ${category === item.category_name ? 'selected-category' : ''}`}
-              onClick={() => setCategory(prev => prev === item.category_name ? "All" : item.category_name)}
+              onClick={() => setCategory(prev => prev === item.category_name ? "All" : item.category_name)} 
+                // for filtering spare parts based on category and show when click on category
             >
               <img
                 className={category === item.category_name ? 'active' : ''}

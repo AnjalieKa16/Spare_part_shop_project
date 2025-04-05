@@ -49,7 +49,7 @@ const upload = multer({
 // Add Employee Route
 router.post('/AddEmployee', upload.single('image'),(req, res) => {
     const { id, name, email,contact_no, address, username, password } = req.body;
-  const image = req.file ? req.file.filename : null;
+    const image = req.file ? req.file.filename : null;
 
     bcrypt.hash(req.body.password.toString(), 10, (err, hash) => {
         if (err) {
@@ -157,6 +157,29 @@ con.query(checkSql, [id], (err, result) => {
 });*/
 
 // Add Category Route
+router.post('/auth/AddCategory',upload.none(), (req, res) => {
+    console.log(req.body); // Debugging
+    const {category_id, category_name } = req.body;
+  
+    // Validate input
+    if (!category_id || !category_name) {
+      return res.json({ status: false, error: "Both category_id and category_name are required." });
+    }
+  
+    const sql = "INSERT INTO product_category (category_id, category_name) VALUES (?, ?)";
+    con.query(sql, [category_id, category_name], (err, result) => {
+      if (err) {
+        if (err.code === 'ER_DUP_ENTRY') {
+          return res.json({ status: false, error: "Category ID already exists." });
+        }
+        return res.json({ status: false, error: err.message });
+      }
+      return res.json({ status: true, message: "Category added successfully." });
+    });
+  });
+
+//Get all employee
+
 router.get('/category', (req, res) => {
     const sql = "SELECT * FROM product_category";
     con.query(sql, (err, result) => {
@@ -175,25 +198,7 @@ router.get('/category/:id', (req, res) => {
     });
   });
 
-  router.post('/AddCategory', (req, res) => {
-    const { category_id, category_name } = req.body;
   
-    // Validate input
-    if (!category_id || !category_name) {
-      return res.json({ status: false, error: "Both category_id and category_name are required." });
-    }
-  
-    const sql = "INSERT INTO product_category (category_id, category_name) VALUES (?, ?)";
-    con.query(sql, [category_id, category_name], (err, result) => {
-      if (err) {
-        if (err.code === 'ER_DUP_ENTRY') {
-          return res.json({ status: false, error: "Category ID already exists." });
-        }
-        return res.json({ status: false, error: err.message });
-      }
-      return res.json({ status: true, message: "Category added successfully." });
-    });
-  });
 
 // Edit Category Route  
 router.put('/EditCategory/:id', (req,res) => {
@@ -219,5 +224,6 @@ router.delete('/delete_category/:id',(req,res)=>{
             return res.json({status:true,Result:result})
     })
 })
+
 
 export {router as adminRouter}
