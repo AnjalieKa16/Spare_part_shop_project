@@ -25,6 +25,7 @@ import HomePage from './Pages/HomePage';
 import Category from './Components/Category';
 import AddCategory from './Components/AddCategory';
 import EditCategory from './Components/EditCategory';
+import Search from './Components/Search';
 
 
 
@@ -76,6 +77,7 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/Search" element={<Search/>} />
         {/*<Route index element={<Header />} /> */}{/* Use Header component for the home page */}
         <Route path="/login" element={<Login />}></Route> 
         <Route path="/register" element={<Register />}></Route> 

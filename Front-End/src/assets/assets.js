@@ -20,6 +20,12 @@ import HondaGenuineOilFilter15400RTA_00 from './HondaGenuineOilFilter15400RTA_00
 import Mobil_1TM_5W_30_1_768x768 from './Mobil_1TM_5W_30_1_768x768.jpg'
 import facebookIcon2 from './facebookIcon2.png'
 import toyota3 from './toyota3.png'
+import visa from './visa.svg'
+import mastercard from './mastercard.svg'
+import paypal from './paypal.svg'
+import location from './location.svg'
+import facebook from './facebook.svg'
+import phone from './phone.svg'
 
 /*import basket from './basket.jpg'
 import background1 from './backgrond1.jpg'
@@ -39,7 +45,13 @@ export const assets = {
     add_icon_green,
     remove_icon_red,
     facebookIcon2,
-    user
+    user,
+    visa,
+    mastercard,
+    paypal,
+    location,
+    facebook,
+    phone
 
 }
 

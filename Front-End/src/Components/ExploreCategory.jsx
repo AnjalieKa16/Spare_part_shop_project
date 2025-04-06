@@ -3,7 +3,7 @@ import './ExploreCategory.css';
 import { category_list } from '../assets/assets';
 
 const ExploreCategory = ({ category, setCategory }) => {
-  console.log('Category List:', category_list); // Debugging: Log the category list
+ //console.log('Category List:', category_list); // Debugging: Log the category list
 
   return (
     <div className='exploreCategory' id='exploreCategory'>

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
 import Footer from '../Footer/Footer';
+import Search from '../Search';
 
-const Navbar = () => {
+const Navbar = ({ onSearchClick }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -32,10 +33,9 @@ const Navbar = () => {
 
           {/* Nav Icons */}
           <div className="navbar-right d-flex align-items-center">
-            <span>
-              <Link to ="/search">
-                <img src={assets.search_line} alt="Search" className="navbar-icon" />
-              </Link>
+            
+            <span onClick={onSearchClick} style={{ cursor: 'pointer' }}>
+            <img src={assets.search_line} alt="Search" className="navbar-icon" />
             </span>
 
           <span className="position-relative d-inline-block ms-3">

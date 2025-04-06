@@ -21,7 +21,8 @@ const SparePartDisplay = ({category}) => {
 
               if(category==='All' || category===item.category ){
 
-                return <SparePartItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image }/>
+                return <SparePartItem 
+                          key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image }/>
 
               }
                 

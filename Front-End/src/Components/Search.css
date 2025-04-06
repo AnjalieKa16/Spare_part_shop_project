@@ -1,0 +1,9 @@
+/* Example for positioning the search bar */
+.search-container {
+    position: absolute;
+    top: 70px; /* Adjust this based on the height of your navbar */
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
